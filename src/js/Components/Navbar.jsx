@@ -14,12 +14,11 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const closeNav = (target) => {
-    console.log(target)
     if (target == 'A' || target == 'BUTTON' || target == 'svg' || target == 'path') setNavOpen(false);
   }
   return (
     <>
-      <nav id='main-nav' class="main d-flex justify-content-between flex-wrap">
+      <nav id='main-nav' class="main d-flex justify-content-between flex-wrap mb-3">
         <div className="nav left">
           <a className="nav-link logo" aria-current="page" href="#">
             <span className="bracket">&#60;</span>
@@ -41,8 +40,8 @@ export const Navbar = () => {
           closeNav(e.target.nodeName);
         }}>
           <HashLink smooth to="#about" className="nav-link">About</HashLink>
-          <HashLink smooth to="#about" className="nav-link">Projects</HashLink>
-          <HashLink smooth to="#about" className="nav-link">Contact</HashLink>
+          <HashLink smooth to="#projects" className="nav-link">Projects</HashLink>
+          <HashLink smooth to="#contact" className="nav-link">Contact</HashLink>
           <button
             className="btn close d-none"
           >
@@ -50,10 +49,10 @@ export const Navbar = () => {
           </button>
         </div>
         <div className="nav right">
-          <a class="nav-link" aria-current="page" href="#">
+          <a class="nav-link" aria-current="page" href="#" target="_blank">
             <VscGithubInverted />
           </a>
-          <a class="nav-link" aria-current="page" href="#">
+          <a class="nav-link" aria-current="page" href="#" target="_blank">
             <BsLinkedin />
           </a>
         </div>

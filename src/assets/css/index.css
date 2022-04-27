@@ -2,7 +2,7 @@
 :root {
   /* bg-colors */
   /* --main-bg: #262335; */
-  --main-bg: #262335;
+  --main-bg: #1a1c23;
   --alt-bg: #343149;
   --secondary-bg: #241b2f;
   --primary-color: #d5706d;
@@ -11,7 +11,7 @@
 body {
 	background-color: var(--main-bg);
   color: #ededee;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 a {
@@ -23,13 +23,25 @@ button.btn:active {
   transform: scale(.8);
 }
 
+.container {
+  max-width: 960px;
+}
+
 /* nav */
 nav.main {
+  background-color: var(--alt-bg);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
 }
 nav div.nav .logo {
   font-size: 1.9em;
-  font-weight: 600;
+  font-weight: 400;
+  transition: all .6s ease-in-out;
+
+}
+
+nav a.logo:hover .bracket {
+  color: #ededee !important;
+  transition: all .6s ease-in-out;
 }
 
 
@@ -38,9 +50,12 @@ a.nav-link {
  align-items: center;
 }
 
-a.nav-link.active {
-  color: red !important;
+nav a:hover,
+nav button:hover {
+  color: var(--primary-color) !important;
 }
+
+
 
 button.close {
   font-size: 1.5em !important;
@@ -50,16 +65,24 @@ div.toggle-link button {
   color: inherit !important;
 }
 
+div.toggle-link button:focus {
+  box-shadow: none;
+}
+
 @media (max-width: 650px) {
   div.nav.middle {
     position: absolute;
     top: -300px;
     flex-direction: column;
     background-color: var(--secondary-bg);
-    width: 100%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
     border: 2px solid #4d194d;
     border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   div.nav.middle.open {
@@ -93,11 +116,6 @@ div.toggle-link button {
   color: var(--primary-color);
 }
 
-/* portfolio */
-.container.portfolio {
-  height: 100vh;
-}
-
 button.to-top {
   opacity: 0 !important;
   color: #ededee;
@@ -107,7 +125,7 @@ button.to-top {
   bottom: 15px;
   border-radius: 100%;
   background-color: var(--primary-color);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
   border: none;
 }
 
@@ -115,11 +133,53 @@ button.to-top.visible {
   opacity: 1 !important;
   transition: all .5s ease-in !important;
 }
+button.to-top.invisible {
+  opacity: 0;
+  transition: all .2s ease-in !important;
+}
 
 button.to-top:hover {
   background-color: #ededee;
   color: var(--primary-color);
   transition: all 1s ease-in-out !important;
+}
+
+/* about */
+section.about {
+  font-size: 1.5em;
+}
+section.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  border: 2px solid var(--primary-color);
+}
+
+section.about h3 span {
+  color: var(--primary-color) !important;
+}
+
+section.about .left {
+  border-right: 3px solid var(--primary-color);
+}
+
+@media (max-width: 650px) {
+  section.about .left {
+    border: none;
+  }
+}
+
+section.about ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li.techstack-icon svg {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 
