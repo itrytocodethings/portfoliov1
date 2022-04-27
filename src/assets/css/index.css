@@ -1,0 +1,79 @@
+
+:root {
+  /* bg-colors */
+  --main-bg: #262335;
+  --secondary-bg: #241b2f;
+  --primary-color: #d5706d;
+}
+
+body {
+	background-color: var(--main-bg);
+  color: #ededee;
+  font-family: 'Baloo 2', sans-serif;
+}
+
+a {
+  color: inherit !important;
+}
+
+/* nav */
+nav.main {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+}
+nav div.nav .logo {
+  font-size: 1.9em;
+  font-weight: 600;
+}
+
+
+a.nav-link {
+ display: flex;
+ align-items: center;
+}
+
+button.close {
+  font-size: 1.5em !important;
+}
+
+div.toggle-link button {
+  color: inherit !important;
+}
+
+@media (max-width: 600px) {
+  div.nav.middle {
+    visibility: hidden;
+    position: absolute;
+    top: -300px;
+    flex-direction: column;
+    background-color: var(--secondary-bg);
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 2px solid #4d194d;
+    border-radius: 5px;
+  }
+
+  div.nav.middle.open {
+    visibility: visible !important;
+    top: 0;
+    transition: top .6s ease-in-out;
+  }
+
+  div.nav.middle button.close {
+    color: inherit;
+    display: flex !important;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  div.toggle-link {
+    display: flex !important;
+    align-items: center;
+  }
+}
+
+.bracket {
+  font-size: 1em !important;
+  color: var(--primary-color);
+}
+
