@@ -1,7 +1,9 @@
 
 :root {
   /* bg-colors */
+  /* --main-bg: #262335; */
   --main-bg: #262335;
+  --alt-bg: #343149;
   --secondary-bg: #241b2f;
   --primary-color: #d5706d;
 }
@@ -41,7 +43,6 @@ div.toggle-link button {
 
 @media (max-width: 600px) {
   div.nav.middle {
-    visibility: hidden;
     position: absolute;
     top: -300px;
     flex-direction: column;
@@ -56,6 +57,12 @@ div.toggle-link button {
     visibility: visible !important;
     top: 0;
     transition: top .6s ease-in-out;
+  }
+
+  div.nav.middle.close {
+    visibility: hidden;
+    top: -300px;
+    transition: all .6s ease-in-out;
   }
 
   div.nav.middle button.close {
@@ -81,4 +88,33 @@ div.toggle-link button {
 .container.portfolio {
   height: 100vh;
 }
+
+button.to-top {
+  opacity: 0 !important;
+  color: #ededee;
+  font-size: 1.3em;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: none;
+}
+
+button.to-top.visible {
+  opacity: 1 !important;
+  transition: all .5s ease-in !important;
+}
+
+button.to-top:focus {
+  box-shadow: none;
+}
+
+button.to-top:hover {
+  background-color: #ededee;
+  color: var(--primary-color);
+  transition: all 1s ease-in-out !important;
+}
+
 

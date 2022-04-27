@@ -24,11 +24,11 @@ export const Navbar = () => {
             <FaBars />
           </button>
         </div>
-        <div className={`nav middle ${navOpen ? 'open' : ''}`}>
+        <div className={`nav middle ${navOpen ? 'open' : 'close'}`}>
           <a class="nav-link active" aria-current="page" href="#">
             Active
           </a>
-          <HashLink to="#two">Second Div</HashLink>
+          <HashLink to="#two" className="nav-link">Second Div</HashLink>
           <a class="nav-link" href="#">
             Second Div
           </a>
