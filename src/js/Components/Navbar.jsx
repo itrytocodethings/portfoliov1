@@ -1,12 +1,15 @@
+// react utils
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
+// react-icons
 import { VscThreeBars } from "react-icons/vsc";
-import me from "../../assets/img/omgitsme.jpg";
 import { VscGithubInverted } from "react-icons/vsc";
 import {BsLinkedin} from "react-icons/bs"
 import { FaBars } from "react-icons/fa";
 import {AiOutlineCloseCircle} from "react-icons/ai";
-import { HashLink } from "react-router-hash-link";
+
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
