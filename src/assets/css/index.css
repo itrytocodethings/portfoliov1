@@ -77,3 +77,8 @@ div.toggle-link button {
   color: var(--primary-color);
 }
 
+/* portfolio */
+.container.portfolio {
+  height: 100vh;
+}
+

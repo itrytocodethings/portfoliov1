@@ -6,6 +6,7 @@ import { VscGithubInverted } from "react-icons/vsc";
 import {BsLinkedin} from "react-icons/bs"
 import { FaBars } from "react-icons/fa";
 import {AiOutlineCloseCircle} from "react-icons/ai";
+import { HashLink } from "react-router-hash-link";
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
@@ -27,8 +28,9 @@ export const Navbar = () => {
           <a class="nav-link active" aria-current="page" href="#">
             Active
           </a>
+          <HashLink to="#two">Second Div</HashLink>
           <a class="nav-link" href="#">
-            Link
+            Second Div
           </a>
           <a class="nav-link" href="#">
             Link
