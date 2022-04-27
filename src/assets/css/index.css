@@ -18,6 +18,11 @@ a {
   color: inherit !important;
 }
 
+button.btn:active {
+  box-shadow: none;
+  transform: scale(.8);
+}
+
 /* nav */
 nav.main {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
@@ -33,6 +38,10 @@ a.nav-link {
  align-items: center;
 }
 
+a.nav-link.active {
+  color: red !important;
+}
+
 button.close {
   font-size: 1.5em !important;
 }
@@ -41,7 +50,7 @@ div.toggle-link button {
   color: inherit !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   div.nav.middle {
     position: absolute;
     top: -300px;
@@ -105,10 +114,6 @@ button.to-top {
 button.to-top.visible {
   opacity: 1 !important;
   transition: all .5s ease-in !important;
-}
-
-button.to-top:focus {
-  box-shadow: none;
 }
 
 button.to-top:hover {
