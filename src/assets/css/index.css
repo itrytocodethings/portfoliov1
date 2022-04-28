@@ -161,6 +161,26 @@ section.about h3 span {
   color: var(--primary-color) !important;
 }
 
+section.about h2 span {
+  font-size: 1.7em;
+}
+
+h2:hover span.wave {
+  display: inline-block;
+  animation: wave .5s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
 section.about .left {
   border-right: 3px solid var(--primary-color);
 }

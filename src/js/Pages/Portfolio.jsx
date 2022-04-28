@@ -39,7 +39,7 @@ const Portfolio = () => {
         <section className="about">
           <div id="about" className="container portfolio">
             <div className="about-content py-5">
-              <h2 className="text-center mb-5">Hello World</h2>
+              <h2 className="text-center mb-5"><span className="wave">👋</span> Hello World</h2>
               <div className="row">
                 <div className="col-12 col-md-3">
                   <div className="left text-center mb-5">
@@ -61,11 +61,8 @@ const Portfolio = () => {
                     <p className="text-center">
                       <ul>
                         {techIcons.map((icon) => (
-                          <li className="techstack-icon scale-up-center">{icon}</li>
+                          <li className="techstack-icon">{icon}</li>
                         ))}
-                        <li className="techstack-icon scale-up-center">
-                          <i class="fab fa-html5"></i>
-                        </li>
                       </ul>
                     </p>
                   </div>
