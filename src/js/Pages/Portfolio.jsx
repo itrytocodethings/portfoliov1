@@ -14,7 +14,6 @@ import {
   SiPython,
   SiFlask,
 } from "react-icons/si";
-import {FaHtml5} from "react-icons/fa"
 
 const Portfolio = () => {
   let techIcons = [
