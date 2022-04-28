@@ -146,6 +146,25 @@ button.to-top:hover {
 button.to-top:hover:focus {
   box-shadow: none;
 }
+/* section .container div {
+  position: relative;
+} */
+section h2 {
+  position: relative;
+  z-index: 1;
+}
+section h2::before{
+  content: '';
+  position: absolute;
+  background-color: black;
+  border: 1px solid var(--primary-color);
+  opacity: 1;
+  width: 5em;
+  bottom: 2px;
+  z-index: -1;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 
 /* about */
 section.about {
@@ -245,7 +264,23 @@ li.techstack-icon:hover div {
   }
 }
 
+
 /* projects */
 section.projects {
   background-color: var(--alt-bg);
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+h2:hover span.pulse {
+  display: inline-block;
+  animation: pulse .2s infinite ease-in-out;
+}
+

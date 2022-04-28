@@ -40,7 +40,7 @@ const Portfolio = () => {
         <section className="about">
           <div id="about" className="container portfolio">
             <div className="about-content py-5">
-              <h2 className="text-center mb-5"><span className="wave">👋</span> Hello World</h2>
+              <h2 className="text-center mb-5"><span className="wave">👋</span> Hello!</h2>
               <div className="row">
                 <div className="col-12 col-md-3">
                   <div className="left text-center mb-5">
@@ -51,7 +51,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className="col-12 col-md-9">
-                  <div className="right">
+                  <div className="right px-3">
                     <p className="mb-5">
                       My name is Wayne and I'm a Full Stack Developer and lover
                       of all things tech. 💻🚀 I'm currently seeking a junior
@@ -75,7 +75,7 @@ const Portfolio = () => {
         <section className="projects">
           <div id="projects" className="container portfolio">
           <div className="projects-content py-5">
-              <h2 className="text-center mb-5"><span className="wave">✨</span>Projects</h2>
+              <h2 className="text-center mb-5"><span className="pulse">✨</span>Projects</h2>
               <div className="row">
               </div>
             </div>
