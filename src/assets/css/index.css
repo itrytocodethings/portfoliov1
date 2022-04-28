@@ -27,6 +27,22 @@ button.btn:active {
   max-width: 960px;
 }
 
+section h2 {
+  position: relative;
+  z-index: 1;
+}
+
+section h2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -10px;
+  width: 1.5em;
+  border-bottom: 4px solid var(--primary-color);
+  z-index: -1;
+}
+
 /* nav */
 nav.main {
   background-color: var(--alt-bg);
@@ -146,24 +162,8 @@ button.to-top:hover {
 button.to-top:hover:focus {
   box-shadow: none;
 }
-/* section .container div {
-  position: relative;
-} */
-section h2 {
-  position: relative;
-  z-index: 1;
-}
-section h2::before{
-  content: '';
-  position: absolute;
-  background-color: black;
-  border: 1px solid var(--primary-color);
-  opacity: 1;
-  width: 5em;
-  bottom: 2px;
-  z-index: -1;
-  left: 50%;
-  transform: translate(-50%, 0);
+button.to-top:focus {
+  box-shadow: none;
 }
 
 /* about */
@@ -279,7 +279,7 @@ section.projects {
   }
 }
 
-h2:hover span.pulse {
+h2 span.pulse {
   display: inline-block;
   animation: pulse .2s infinite ease-in-out;
 }

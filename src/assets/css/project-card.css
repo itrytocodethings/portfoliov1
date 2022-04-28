@@ -1,0 +1,25 @@
+.card.project-card {
+  padding:1px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-weight: 600;
+}
+
+.project-card img.project-img {
+  border-radius: 10px 10px 0 0;
+  background-color: var(--primary-color);
+}
+
+.project-card .card-body {
+  background-color: black;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--secondary-bg);
+}
+
+.gh-icon {
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-right: 15px;
+}
