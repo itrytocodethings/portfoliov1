@@ -34,7 +34,7 @@ nav.main {
 }
 nav div.nav .logo {
   font-size: 1.9em;
-  font-weight: 400;
+  font-weight: 600;
   transition: all .6s ease-in-out;
 
 }
@@ -74,15 +74,17 @@ div.toggle-link button:focus {
     position: absolute;
     top: -300px;
     flex-direction: column;
-    background-color: var(--secondary-bg);
-    width: 80%;
+    background-color: var(--alt-bg);
+    width: 90%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
-    border: 2px solid #4d194d;
-    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     padding-top: 15px;
     padding-bottom: 15px;
+    z-index: 100;
   }
 
   div.nav.middle.open {
@@ -118,14 +120,12 @@ div.toggle-link button:focus {
 
 button.to-top {
   opacity: 0 !important;
-  color: #ededee;
-  font-size: 1.3em;
+  color: var(--primary-color);
   position: fixed;
+  font-size: 1.5em;
   right: 15px;
   bottom: 15px;
   border-radius: 100%;
-  background-color: var(--primary-color);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
   border: none;
 }
 
@@ -139,9 +139,12 @@ button.to-top.invisible {
 }
 
 button.to-top:hover {
-  background-color: #ededee;
-  color: var(--primary-color);
+  color: #ededee;
   transition: all 1s ease-in-out !important;
+}
+
+button.to-top:hover:focus {
+  box-shadow: none;
 }
 
 /* about */
@@ -185,6 +188,12 @@ section.about .left {
   border-right: 3px solid var(--primary-color);
 }
 
+@media(max-width: 767px) {
+  section.about .left {
+    border-right: none;
+  }
+}
+
 @media (max-width: 650px) {
   section.about .left {
     border: none;
@@ -195,6 +204,11 @@ section.about ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+  padding-left: 0;
+}
+
+li.techstack-icon {
+  position: relative;
 }
 
 li.techstack-icon svg {
@@ -202,4 +216,36 @@ li.techstack-icon svg {
   height: 1.5em;
 }
 
+li.techstack-icon div {
+  opacity: 0;
+  position: absolute;
+  top: -1.5em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-weight: 800;
+}
 
+li.techstack-icon:hover {
+  /* transform: scale(3); */
+  animation: pop-turn 1s 1;
+  cursor: pointer;
+}
+
+li.techstack-icon:hover div {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+@keyframes pop-turn {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* projects */
+section.projects {
+  background-color: var(--alt-bg);
+}

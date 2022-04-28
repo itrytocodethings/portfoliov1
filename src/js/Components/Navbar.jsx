@@ -18,7 +18,7 @@ export const Navbar = () => {
   }
   return (
     <>
-      <nav id='main-nav' class="main d-flex justify-content-between flex-wrap mb-3">
+      <nav id='main-nav' class="main d-flex justify-content-between flex-wrap">
         <div className="nav left">
           <a className="nav-link logo" aria-current="page" href="#">
             <span className="bracket">&#60;</span>
@@ -49,7 +49,7 @@ export const Navbar = () => {
           </button>
         </div>
         <div className="nav right">
-          <a class="nav-link" aria-current="page" href="#" target="_blank">
+          <a class="nav-link" aria-current="page" href="https://github.com/itrytocodethings" target="_blank">
             <VscGithubInverted />
           </a>
           <a class="nav-link" aria-current="page" href="#" target="_blank">

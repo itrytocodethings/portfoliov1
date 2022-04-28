@@ -16,14 +16,16 @@ import {
 } from "react-icons/si";
 
 const Portfolio = () => {
+
   let techIcons = [
-    <SiHtml5 style={{ color: "#e34c26" }} />,
-    <SiCss3 style={{ color: "#2965f1" }} />,
-    <SiJavascript style={{ color: "#F0DB4F" }} />,
-    <SiReact style={{ color: "#61DBFB" }} />,
-    <SiPython style={{ color: "#FFE873" }} />,
-    <SiFlask />,
+    {name: 'HTML', color: '#e34c26', icon: <SiHtml5 style={{ color: "#e34c26" }} />},
+    {name: 'CSS', color: '#2965f1' , icon: <SiCss3 style={{ color: "#2965f1" }} />},
+    {name: 'Javascript', color: '#f0db4f', icon: <SiJavascript style={{ color: "#F0DB4F" }} />},
+    {name: 'React', color: '#61dbfb', icon: <SiReact style={{ color: "#61DBFB" }} />},
+    {name: 'Python', color: '#ffe873', icon: <SiPython style={{ color: "#FFE873" }} />},
+    {name: 'Flask', color: 'inherit', icon: <SiFlask/>},
   ];
+
   const [showPageUp, setShowPageUp] = useState(false);
   window.onscroll = () => {
     window.scrollY > 50 ? setShowPageUp(true) : setShowPageUp(false);
@@ -59,8 +61,8 @@ const Portfolio = () => {
                     </p>
                     <p className="text-center">
                       <ul>
-                        {techIcons.map((icon) => (
-                          <li className="techstack-icon">{icon}</li>
+                        {techIcons.map((tech) => (
+                          <li className="techstack-icon"><div className="tech" style={{color: tech.color}}>{tech.name}</div>{tech.icon}</li>
                         ))}
                       </ul>
                     </p>
@@ -72,7 +74,11 @@ const Portfolio = () => {
         </section>
         <section className="projects">
           <div id="projects" className="container portfolio">
-            <h1>hello world :)</h1>
+          <div className="projects-content py-5">
+              <h2 className="text-center mb-5"><span className="wave">✨</span>Projects</h2>
+              <div className="row">
+              </div>
+            </div>
           </div>
         </section>
         <section className="contact">
