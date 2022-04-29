@@ -1,24 +1,24 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.id]: e.target.value});
-    console.log(e.target.id)
-  }
-  const handleSubmit = e => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+    console.log(e.target.id);
+  };
+  const handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", formData })
+      body: encode({ "form-name": "contact", formData }),
     })
       .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .catch((error) => alert(error));
 
     e.preventDefault();
   };
@@ -41,24 +41,28 @@ export const ContactForm = () => {
                 <form name="contact" onSubmit={handleSubmit}>
                   <div class="mb-3">
                     <input
+                      name="name"
                       type="text"
                       class="form-control"
                       id="name"
                       placeholder="Name"
-                      value={formData['name']}
+                      value={formData.name}
                       onChange={(e) => {
-                      handleChange(e);
+                        handleChange(e);
                       }}
                     />
                   </div>
                   <div class="mb-3">
                     <input
+                      name="email"
                       type="email"
                       class="form-control"
                       id="email"
                       placeholder="Email"
-                      value={formData['email']}
-                      onChange={(e) => {handleChange(e)}}
+                      value={formData["email"]}
+                      onChange={(e) => {
+                        handleChange(e);
+                      }}
                     />
                   </div>
                   <div class="mb-3">
@@ -68,15 +72,18 @@ export const ContactForm = () => {
                       rows="5"
                       id="message"
                       placeholder="Message"
-                      value={formData['message']}
+                      value={formData["message"]}
+                      onChange={(e) => {
+                        handleChange(e);
+                      }}
                       required
-                      onChange={(e) => {handleChange(e)}}
                     ></textarea>
                   </div>
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="d-flex justify-content-center">
-                  <button type="submit" class="btn btn-contact">
-                    Submit
-                  </button>
+                    <button type="submit" class="btn btn-contact">
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>

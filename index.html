@@ -10,6 +10,31 @@
     <title>Wayne Bailey | Full Stack Web Developer</title>
   </head>
   <body>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <div class="mb-3">
+        <input
+          name="name"
+          type="text"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          name="email"
+          type="email"
+        />
+      </div>
+      <div class="mb-3">
+        <textarea
+          name="message"
+          required
+        ></textarea>
+      </div>
+      <div className="d-flex justify-content-center">
+        <button type="submit" class="btn btn-contact">
+          Submit
+        </button>
+      </div>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/js/main.jsx"></script>
   </body>
