@@ -1,6 +1,17 @@
+div.circles:first-of-type {
+  background-color: red;
+}
+div.circles:nth-of-type(2) {
+  background-color: yellow;
+}
+div.circles:last-of-type {
+  background-color: green;
+}
+
 .card.project-card {
+  padding: 5px;
   background-color: var(--main-bg);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border: 1px solid rgba(203, 203, 203, 0.2) !important;
   /* border: 1px solid var(--primary-color); */
 }
@@ -43,16 +54,6 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-div.circles:first-of-type {
-  background-color: red;
-}
-div.circles:nth-of-type(2) {
-  background-color: yellow;
-}
-div.circles:last-of-type {
-  background-color: green;
-}
-
 .project-card-header div.tab {
   padding: 0 20px;
   padding-left: 3px !important;
@@ -60,8 +61,12 @@ div.circles:last-of-type {
   background-color: var(--alt-bg);
   border-radius: 5px 5px 0 0;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border: 1px solid rgba(255,255,255, .2) !important;
+  border: 1px solid rgba(255,255,255, .1) !important;
   border-bottom: none !important;
+}
+
+.proj-title {
+  font-size: .8em;
 }
 
 .gh-icon {

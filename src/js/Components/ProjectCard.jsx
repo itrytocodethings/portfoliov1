@@ -27,7 +27,7 @@ const ProjectCard = (props) => {
           </div>
           <img src={projImg} alt="..." />
           <div class={`card-body ${showDetails ? 'show' : ''}`}>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex quas labore libero pariatur corrupti accusantium distinctio officiis aspernatur eos assumenda.</p>
+            <p className="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex quas labore libero pariatur corrupti accusantium distinctio officiis aspernatur eos assumenda.</p>
           </div>
         </div>
       </div>
