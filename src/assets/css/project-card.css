@@ -1,4 +1,70 @@
 .card.project-card {
+  background-color: var(--main-bg);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* border: 1px solid var(--primary-color); */
+}
+
+.card.project-card:hover {
+  cursor: pointer;
+}
+
+.card.project-card .card-body {
+  padding: 10px !important;
+  height: 10px;
+}
+
+.card.project-card .card-body p {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.card.project-card .card-body.show {
+  height: auto;
+}
+
+.card.project-card .card-body.show p {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.project-card-header {
+  display: inline-block;
+  padding: 5px !important;
+  padding-bottom: 0 !important;
+}
+
+.project-card-header .circles {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+div.circles:first-of-type {
+  background-color: red;
+}
+div.circles:nth-of-type(2) {
+  background-color: yellow;
+}
+div.circles:last-of-type {
+  background-color: green;
+}
+
+.project-card-header div.tab {
+  padding: 0 20px;
+  padding-left: 3px !important;
+  display: inline-block !important;
+  background-color: var(--alt-bg);
+  border-radius: 5px 5px 0 0;
+}
+
+
+.card.project-card img {
+  /* border: 1px solid var(--primary-color); */
+}
+
+/* .card.project-card {
   padding: .1em;
   background-color: var(--primary-color);
   border-radius: 10px;
@@ -15,7 +81,7 @@
 .project-card .card-body {
   border-radius: 0 0 10px 10px;
   background-color: var(--main-bg);
-}
+} */
 
 .gh-icon {
   display: inline-block;

@@ -111,9 +111,6 @@ const Portfolio = () => {
                 <ProjectCard />
                 <ProjectCard />
                 <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
               </div>
             </div>
           </div>

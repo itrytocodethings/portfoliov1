@@ -27,6 +27,10 @@ button.btn:active {
   max-width: 960px;
 }
 
+section {
+  min-height: 50vh;
+}
+
 section h2 {
   position: relative;
   z-index: 1;
