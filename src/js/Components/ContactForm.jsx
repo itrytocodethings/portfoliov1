@@ -11,17 +11,6 @@ export const ContactForm = () => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
     console.log(e.target.id);
   };
-  const handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", formData }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
-  };
 
   return (
     <>
@@ -38,7 +27,7 @@ export const ContactForm = () => {
             </div>
             <div className="col-12 col-md-9">
               <div className="contact-right px-5">
-                <form name="contact" onSubmit={handleSubmit}>
+                <form name="contact" method="POST">
                   <div class="mb-3">
                     <input
                       name="name"
