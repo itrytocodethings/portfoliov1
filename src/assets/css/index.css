@@ -191,7 +191,7 @@ section.about h2 span {
   font-size: 1.7em;
 }
 
-h2:hover span.wave {
+span.wave {
   display: inline-block;
   animation: wave .5s infinite;
 }
@@ -286,5 +286,44 @@ section.projects {
 h2 span.pulse {
   display: inline-block;
   animation: pulse .2s infinite ease-in-out;
+}
+
+/* Contact */
+.contact-left p {
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+.contact .row div.col-12:first-of-type {
+  border-right: 3px solid var(--primary-color);
+}
+
+@media(max-width: 767px) {
+  .contact .row div.col-12:first-of-type {
+    border: none;
+  }
+}
+
+::placeholder {
+  color: var(--main-bg) !important;
+}
+.form-control {
+  background-color: var(--primary-color);
+  border: 1px solid var(--alt-bg);
+  color: var(--main-bg) !important;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-control:focus{
+  background-color: var(--primary-color);
+  box-shadow: none;
+  border: none;
+}
+
+button.btn-contact {
+  background-color: var(--alt-bg) !important;
+  color: #ededee;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 

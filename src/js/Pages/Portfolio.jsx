@@ -6,6 +6,7 @@ import me from "../../assets/img/omgitsme.jpg";
 // components
 import { Navbar } from "../Components/Navbar";
 import ProjectCard from "../Components/ProjectCard";
+import ContactForm from "../Components/ContactForm";
 
 // react-icons
 import { BiArrowToTop } from "react-icons/bi";
@@ -83,7 +84,7 @@ const Portfolio = () => {
                       the pros! I have a passion for web application development
                       and have experience with:
                     </p>
-                    <p className="text-center">
+                    <div className="text-center">
                       <ul>
                         {techIcons.map((tech) => (
                           <li className="techstack-icon">
@@ -94,7 +95,7 @@ const Portfolio = () => {
                           </li>
                         ))}
                       </ul>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -116,9 +117,7 @@ const Portfolio = () => {
           </div>
         </section>
         <section className="contact">
-          <div id="contact" className="container portfolio">
-            <h1>hello world :)</h1>
-          </div>
+          <ContactForm />
         </section>
         <button
           className={`btn to-top ${showPageUp ? "visible" : "invisible"}`}

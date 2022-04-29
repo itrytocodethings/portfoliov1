@@ -65,7 +65,7 @@ div.circles:last-of-type {
 .card.project-card .card-body.show div {
   visibility: visible;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .tech-badges span {
