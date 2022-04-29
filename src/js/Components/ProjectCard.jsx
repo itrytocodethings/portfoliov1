@@ -25,7 +25,7 @@ const ProjectCard = (props) => {
               </div>
             </div>
           </div>
-          <img src={projImg} class="card-img-top" alt="..." />
+          <img src={projImg} alt="..." />
           <div class={`card-body ${showDetails ? 'show' : ''}`}>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex quas labore libero pariatur corrupti accusantium distinctio officiis aspernatur eos assumenda.</p>
           </div>
