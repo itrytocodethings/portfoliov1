@@ -13,31 +13,10 @@ div.circles:last-of-type {
   background-color: var(--main-bg);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border: 1px solid rgba(203, 203, 203, 0.2) !important;
-  /* border: 1px solid var(--primary-color); */
 }
 
 .card.project-card:hover {
   cursor: pointer;
-}
-
-.card.project-card .card-body {
-  padding: 10px !important;
-  height: 10px;
-}
-
-.card.project-card .card-body p {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.card.project-card .card-body.show {
-  height: auto;
-}
-
-.card.project-card .card-body.show p {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
 }
 
 .project-card-header {
@@ -69,6 +48,29 @@ div.circles:last-of-type {
   font-size: .8em;
 }
 
+.card.project-card .card-body {
+  padding: 10px !important;
+  height: 10px;
+}
+
+.card.project-card .card-body div {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.card.project-card .card-body.show {
+  height: auto;
+}
+
+.card.project-card .card-body.show div {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.tech-badges span {
+  margin-right: 5px;
+}
 .gh-icon {
   display: inline-block;
   font-size: 1.3em;
