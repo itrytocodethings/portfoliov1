@@ -1,8 +1,17 @@
+//react stuff
 import React, { useState } from "react";
+
+//images/css
 import "../../assets/css/project-card.css";
+import projImg from "../../assets/img/chefup.png";
+
+//icons
 import { VscGithubAlt } from "react-icons/vsc";
 import { BiWorld } from "react-icons/bi";
-import projImg from "../../assets/img/chefup.png";
+
+//components
+import TechBadge from "./TechBadge";
+
 const ProjectCard = (props) => {
   const [showDetails, setShowDetails] = useState(false);
   const showProjDetails = () => {
@@ -29,9 +38,9 @@ const ProjectCard = (props) => {
           <div class={`card-body ${showDetails ? "show" : ""}`}>
             <div>
               <div className="tech-badges d-flex justify-content-center">
-                <span class="badge rounded-pill bg-primary">Javascript</span>
-                <span class="badge rounded-pill bg-primary">React</span>
-                <span class="badge rounded-pill bg-primary">Flask</span>
+                <TechBadge techName="Javascript" hexColor="#f0db4f"/>
+                <TechBadge techName="React" hexColor="#61dbfb"/>
+                <TechBadge techName="Flask" hexColor="#ededee"/>
               </div>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex quas
               labore libero pariatur corrupti accusantium distinctio officiis
@@ -45,18 +54,3 @@ const ProjectCard = (props) => {
 };
 
 export default ProjectCard;
-
-{
-  /* <>
-<div className="col-8 col-md-4">
-  <div class="card project-card">
-    <img className="project-img" src={projImg} alt="project image" />
-    <div class="card-body">
-      <p class="card-text">
-       <span className="gh-icon"><VscGithubAlt /></span> ChefUp
-      </p>
-    </div>
-  </div>
-</div>
-</> */
-}

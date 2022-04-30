@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {BiMailSend} from "react-icons/bi"
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -71,7 +71,7 @@ export const ContactForm = () => {
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="d-flex justify-content-center">
                     <button type="submit" class="btn btn-contact">
-                      Submit
+                      <BiMailSend />
                     </button>
                   </div>
                 </form>

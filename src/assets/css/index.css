@@ -327,3 +327,9 @@ button.btn-contact {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+button.btn-contact:hover {
+  background-color: #3d414e !important;
+  transition: all 1s ease-in-out;
+  color: #ededee;
+}
+
