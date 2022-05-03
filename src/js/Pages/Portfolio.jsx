@@ -79,10 +79,7 @@ const Portfolio = () => {
                   <div className="right px-3">
                     <p className="mb-5">
                       My name is Wayne and I'm a Full Stack Developer and lover
-                      of all things tech. 💻🚀 I'm currently seeking a junior
-                      developer role to gain industry experience and learn from
-                      the pros! I have a passion for web application development
-                      and have experience with:
+                      of all things tech. 💻🚀 I'm currently seeking a junior developer role where I can apply my skills in JavaScript, React, Python, and my excellent critical thinking and desire to continuously learn new and more advanced technologies. I have a passion for web application development and have experience with:
                     </p>
                     <div className="text-center">
                       <ul>
