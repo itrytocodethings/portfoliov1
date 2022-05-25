@@ -52,7 +52,7 @@ export const Navbar = () => {
           <a class="nav-link" aria-current="page" href="https://github.com/itrytocodethings" target="_blank">
             <VscGithubInverted />
           </a>
-          <a class="nav-link" aria-current="page" href="#" target="_blank">
+          <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/imwaynebailey/" target="_blank">
             <BsLinkedin />
           </a>
         </div>
