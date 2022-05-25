@@ -19,6 +19,9 @@ import {
   SiFlask,
 } from "react-icons/si";
 
+// project-images
+import ChefUp from '../../assets/img/chefup.png'
+
 const Portfolio = () => {
   let techIcons = [
     {
@@ -56,6 +59,15 @@ const Portfolio = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  let projects = [
+    {
+      name: 'ChefUp',
+      desc: 'ChefUp is a full stack web application that I designed/developed with two of my teammates for our cohort’s final project. Check out more info on github!',
+      img: ChefUp,
+      url: 'https://github.com/itrytocodethings/ChefUp'
+    }
+  ]
   return (
     <>
       <Navbar />
@@ -79,7 +91,7 @@ const Portfolio = () => {
                   <div className="right px-3">
                     <p className="mb-5">
                       My name is Wayne and I'm a Full Stack Developer and lover
-                      of all things tech. 💻🚀 I'm currently seeking a junior developer role where I can apply my skills in JavaScript, React, Python, and my excellent critical thinking and desire to continuously learn new and more advanced technologies. I have a passion for web application development and have experience with:
+                      of all things tech. 💻🚀 I'm currently seeking a junior developer role where I can apply my skills in JavaScript, React, Python, as well as excellent critical thinking skills and desire to continuously learn new and more advanced technologies. I have a passion for web application development and have experience with:
                     </p>
                     <div className="text-center">
                       <ul>
@@ -106,9 +118,9 @@ const Portfolio = () => {
                 <span className="pulse">✨</span>Projects
               </h2>
               <div className="row gx-3 gy-3 align-center justify-content-center">
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                {projects.map((proj) => {
+                  return <ProjectCard project={proj} />
+                })}
               </div>
             </div>
           </div>
