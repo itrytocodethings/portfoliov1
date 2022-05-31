@@ -21,6 +21,7 @@ import {
 
 // project-images
 import ChefUp from '../../assets/img/chefup.png'
+import Nana from '../../assets/img/nana.png'
 
 const Portfolio = () => {
   let techIcons = [
@@ -66,6 +67,12 @@ const Portfolio = () => {
       desc: 'ChefUp is a full stack web application that I designed/developed with two of my teammates for our cohort’s final project. Check out more info on github!',
       img: ChefUp,
       url: 'https://github.com/itrytocodethings/ChefUp'
+    },
+    {
+      name: 'Not Another Note App',
+      desc: 'Not another Note App is a simple note editor inspired by SimpleNote. Users can create notes, format them with markdown, and preview their formatted notes.',
+      img: Nana,
+      url: 'https://github.com/itrytocodethings/not-another-note-app'
     }
   ]
   return (

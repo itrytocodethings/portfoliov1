@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => {
               </div>
             </div>
           </div>
-          <img src={project.img} alt="..." />
+          <img  className="proj-img img-fluid" src={project.img} alt="..." />
           <div class={`card-body ${showDetails ? "show" : ""}`}>
             <div>
               <div className="tech-badges d-flex justify-content-center">

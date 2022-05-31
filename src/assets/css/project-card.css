@@ -8,6 +8,10 @@ div.circles:last-of-type {
   background-color: green;
 }
 
+img.proj-img {
+  height: 146px;
+}
+
 .card.project-card {
   padding: 5px;
   background-color: var(--main-bg);
