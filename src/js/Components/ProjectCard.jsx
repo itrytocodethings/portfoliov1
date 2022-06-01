@@ -15,13 +15,13 @@ import TechBadge from "./TechBadge";
 
 const ProjectCard = ({ project }) => {
   console.log(project);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(true);
   const showProjDetails = () => {
     showDetails ? setShowDetails(false) : setShowDetails(true);
   };
   return (
     <>
-      <div className="col-10 col-md-6">
+      <div className="col-12 col-md-6">
         <div class="card mb-3 project-card" onClick={showProjDetails}>
           <div className="project-card-header d-flex">
             <div className="d-flex align-self-center me-1">

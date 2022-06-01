@@ -10,7 +10,9 @@ div.circles:last-of-type {
 
 img.proj-img {
   object-fit: cover !important;
+  width: 100%;
   height: 300px;
+  object-position: 0% 0%;
 }
 
 .card.project-card {
