@@ -9,7 +9,8 @@ div.circles:last-of-type {
 }
 
 img.proj-img {
-  height: 146px;
+  object-fit: cover !important;
+  height: 300px;
 }
 
 .card.project-card {

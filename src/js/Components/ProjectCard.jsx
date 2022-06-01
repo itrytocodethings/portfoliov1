@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
   };
   return (
     <>
-      <div className="col-10 col-md-4">
+      <div className="col-10 col-md-6">
         <div class="card mb-3 project-card" onClick={showProjDetails}>
           <div className="project-card-header d-flex">
             <div className="d-flex align-self-center me-1">
