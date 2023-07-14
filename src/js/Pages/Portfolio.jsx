@@ -1,7 +1,7 @@
 // react-utils
 import React, { useState, useEffect } from "react";
 import { NavHashLink } from "react-router-hash-link";
-import me from "../../assets/img/omgitsme.jpg";
+import me from "../../assets/img/me.jpg";
 
 // components
 import { Navbar } from "../Components/Navbar";
@@ -17,11 +17,15 @@ import {
   SiReact,
   SiPython,
   SiFlask,
+  SiDocker,
+  SiAmazonaws,
+  SiKubernetes,
+  SiCsharp,
 } from "react-icons/si";
 
 // project-images
-import ChefUp from '../../assets/img/chefup.png'
-import Nana from '../../assets/img/nana.png'
+import ChefUp from "../../assets/img/chefup.png";
+import Nana from "../../assets/img/nana.png";
 
 const Portfolio = () => {
   let techIcons = [
@@ -51,6 +55,21 @@ const Portfolio = () => {
       icon: <SiPython style={{ color: "#FFE873" }} />,
     },
     { name: "Flask", color: "inherit", icon: <SiFlask /> },
+    {
+      name: "Docker",
+      color: "#0db7ed",
+      icon: <SiDocker style={{ color: "#0db7ed" }} />,
+    },
+    {
+      name: "AWS",
+      color: "#ff9900",
+      icon: <SiAmazonaws style={{ color: "#ff9900" }} />,
+    },
+    {
+      name: "C#",
+      color: "#684D95",
+      icon: <SiCsharp style={{ color: "#684D95" }} />,
+    },
   ];
 
   const [showPageUp, setShowPageUp] = useState(false);
@@ -63,18 +82,18 @@ const Portfolio = () => {
 
   let projects = [
     {
-      name: 'ChefUp',
-      desc: 'ChefUp is a full stack web application that I designed/developed with two of my teammates for our cohort’s final project. Check out more info on github!',
+      name: "ChefUp",
+      desc: "ChefUp is a full stack web application that I designed/developed with two of my teammates for our cohort’s final project. Check out more info on github!",
       img: ChefUp,
-      url: 'https://github.com/itrytocodethings/ChefUp'
+      url: "https://github.com/itrytocodethings/ChefUp",
     },
     {
-      name: 'Not Another Note App',
-      desc: 'Not another Note App is a simple note editor inspired by SimpleNote. Users can create notes, format them with markdown, and preview their formatted notes.',
+      name: "Not Another Note App",
+      desc: "Not another Note App is a simple note editor inspired by SimpleNote. Users can create notes, format them with markdown, and preview their formatted notes.",
       img: Nana,
-      url: 'https://github.com/itrytocodethings/not-another-note-app'
-    }
-  ]
+      url: "https://github.com/itrytocodethings/not-another-note-app",
+    },
+  ];
   return (
     <>
       <Navbar />
@@ -97,8 +116,13 @@ const Portfolio = () => {
                 <div className="col-12 col-md-9">
                   <div className="right px-3">
                     <p className="mb-5">
-                      My name is Wayne and I'm a Full Stack Developer and lover
-                      of all things tech. 💻🚀 I'm currently seeking a junior developer role where I can apply my skills in JavaScript, React, Python, as well as excellent critical thinking skills and desire to continuously learn new and more advanced technologies. I have a passion for web application development and have experience with:
+                      I'm Wayne, a passionate Full Stack Developer with a love
+                      for technology. 💻🚀 Currently a junior developer, working
+                      with JavaScript, React, and Node. Alongside my technical
+                      skills, I love problem solving and continuously seek
+                      to learn cutting-edge technologies. Web application
+                      development is my true passion, and I have valuable
+                      experience working on diverse projects. Some tech I've worked with:
                     </p>
                     <div className="text-center">
                       <ul>
@@ -126,7 +150,7 @@ const Portfolio = () => {
               </h2>
               <div className="row gx-3 gy-3 align-center justify-content-center">
                 {projects.map((proj) => {
-                  return <ProjectCard project={proj} />
+                  return <ProjectCard project={proj} />;
                 })}
               </div>
             </div>

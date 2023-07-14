@@ -179,8 +179,9 @@ section.about img {
   height: 150px;
   border-radius: 100%;
   object-fit: cover;
-  object-position: 0 0;
+  object-position: bottom 50% 50% 50%;
   border: 2px solid var(--primary-color);
+  pointer-events: none;
 }
 
 section.about h3 span {
